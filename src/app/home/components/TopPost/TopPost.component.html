@@ -1,0 +1,13 @@
+  <div class="categ">
+                <div class="mod_title">
+                    <div class="border_b"></div>
+                    <h4 class="mod_title_t">
+                        <label>热文排行榜</label>
+                        
+                    </h4>
+                </div>
+                <ul class="hot_wrap tracking-ad" >
+                    <li *ngFor="let item of items"><a href="/u/{{item.author}}/{{item.id}}" target="_blank" title="{{item.title}}"><i class="fa fa-caret-right"></i><span title="{{item.title}}">{{item.title}}</span></a></li>
+                    
+                </ul>
+            </div>

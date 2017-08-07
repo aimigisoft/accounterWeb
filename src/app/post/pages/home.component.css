@@ -1,0 +1,172 @@
+.navsize{font-size:1.2em;}
+.return_BackTop{
+    position: fixed; z-index:100; right: 15px; bottom: 45px; width: 54px;height: 54px;background-color: #feb252;
+}
+.return_BackTop a { display: inline-block;width: 100%;line-height: 54px;text-align: center;color: #fff;font-size: 18px;text-decoration: none;}
+.post-home{
+    margin:0 auto;
+}
+.post-header{
+    margin:0;
+    padding:0px;
+} 
+.post-header .header-title{
+    height:70px;
+   
+    background: #fff;
+	clear: both;
+}
+.header-title h1{
+    font-size: 150%;
+	font-weight: bold;
+	line-height: 1.5;
+	margin-left: 1em;
+	margin-top: 10px;
+	width: 50%;
+	float: left;
+}
+.header-title h1 a{
+     color:#000;
+}
+.header-nav{
+    background-color: black;
+	height: 60px;line-height: 60px;overflow: hidden;
+	clear: both;
+}
+.header-nav ul{
+    padding:0;
+    min-height: 30px;
+    float: left;
+}
+.header-nav ul li{   
+    float: left;
+}
+
+.header-nav ul a {
+	display: block;
+    color:#ccc;
+	padding:0 1.5em;height: 60px;font-family:'微软雅黑';
+	float: left;font-size: 1.2em;
+	text-align: center;transition-duration:0.3s;
+}
+.header-nav ul a:link, #navList a:visited, #navList a:active {
+	color: #bbb;
+}
+.header-nav ul a:hover {
+	color: white;
+	background-color: #343434;
+	text-decoration: none;text-shadow: 0px 0px 1px #000;
+}
+
+
+/**/
+.post-state{
+    line-height: 60px;
+    float: right;
+	color: #ccc;
+    padding-right: 30px;
+	text-align: right;
+}
+.post-main{
+    margin:0;
+    padding:0;
+    background: #D2D8DE;
+    min-width: 950px;
+	text-align: left;
+	padding:20px 0 0 10px;
+	overflow: hidden;
+}
+.main-sidebar{
+    min-width: 230px;
+	min-height: 200px;
+	padding: 0px 0 0px 5px;	
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all;
+}
+
+/* 左侧组件样式*/
+.sidebar-widget{
+    border-radius:7px;
+    margin-bottom:15px;
+	text-indent:0;
+	background: #FAFCFD;
+}
+
+.sidebar-widget .widget-content{
+    padding:0px 10px 10px  10px;
+	background: #FAFCFD;
+	border-radius:7px;
+	box-shadow:1px 1px 2px #A7A8AD;
+	line-height: 1.5;
+}
+.widget-content>ul{
+    line-height: 1.5;
+    padding:0px;
+        word-break: break-all;
+}
+.widget-content>ul>li{
+        text-indent: 1em;
+    padding: 10px 5px;
+    border-bottom: 1px solid #DADFE1;
+    border-top: 1px solid #FFFFFF;
+    overflow: hidden;
+}
+.widget-content>ul>li a{
+
+}
+.sidebar-widget h3{
+    background: #390;border-bottom: 1px solid #006600;
+    border-top-left-radius: 7px; border-top-right-radius: 7px; color: #FFFFFF;font-size: 1.2em;
+line-height:1.8em;
+padding: 5px;
+text-indent:0.5em;text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+.widget-profile{
+    width:230px;
+    margin-top:5px;line-height:1.5;text-align:left
+}
+
+.main-content{
+     margin-top:5px;
+    margin-right: 20px;
+}
+/*文章内容*/
+.post-detail{
+    min-height: 200px;margin-bottom: 15px;
+	padding:15px;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all;background: #fff;
+    border-radius: 7px;
+    box-shadow: 1px 1px 2px #A7A8AD;
+}
+/*文章标题*/
+.post-detail .post-title{
+    font-size: 130%;
+	font-weight: bold;
+	border-bottom: 1px solid #999;
+	float: left;
+	line-height:2em;
+	width: 100%;
+	padding-left: 5px;
+        color: #390;
+    transition: all 0.4s linear 0s;
+}
+/*文章正文*/
+.post-detail.post-body{
+    padding: 15px 2px 5px 5px;
+	line-height: 1.5;
+	color: #000;
+	border-bottom: 1px solid #ccc;
+}
+/*文章脚注*/
+.post-detail.post-info-block{}
+/*文章作者等信息*/
+.post-detail.post-desc{}
+/*底部*/
+.post-footer{
+
+}

@@ -1,0 +1,56 @@
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">accounter.cn</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="#">园子</a></li>
+            <li><a href="#">首页</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">useraction</a></li>
+
+        </ul>
+    </div>
+</nav>
+</header>
+<div class="container-fluid clearfix">
+    <div class="row ">
+        <div class="jumbotron">
+            <h3>aimigi 的博客</h3>
+            <p>交流、学习、分享、提高</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">博客</a></li>
+                <li><a href="#">文章</a></li>
+                <li><a href="#">评论</a></li>
+                <li><a href="#">相册</a></li>
+                <li><a href="#">文件</a></li>
+                <li><a href="#">选项</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-2">
+            <ul class="list-group">
+                <li class="list-group-item"><a routerLink='/my/blog/admin/add'>添加新博客</a></li>
+                <li class="list-group-item">草稿箱</li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item">编辑分类</li>
+                <li class="list-group-item">分类列表1</li>
+                <li class="list-group-item">分类列表2</li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <router-outlet></router-outlet>
+            
+        </div>
+    </div>
+</div>
+<footer></footer>
