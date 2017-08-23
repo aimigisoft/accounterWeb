@@ -1,6 +1,7 @@
 
 
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';  
 
 
 
@@ -16,14 +17,17 @@ import {
     UserPostCategoryComponent,
     UserPostTagsComponent,
     UsuallyLinksComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    PostInfoBlockComponent
+
 } from './components';
 
 
 
 @NgModule({
     imports: [
-
+        CommonModule,
+        
     ],
     declarations: [
         CommentRankComponent,
@@ -37,7 +41,8 @@ import {
         UserPostCategoryComponent,
         UserPostTagsComponent,
         UsuallyLinksComponent,
-        PostDetailComponent
+        PostDetailComponent,
+        PostInfoBlockComponent
     ],
     exports: [
         CommentRankComponent,
@@ -51,7 +56,8 @@ import {
         UserPostCategoryComponent,
         UserPostTagsComponent,
         UsuallyLinksComponent,
-        PostDetailComponent
+        PostDetailComponent,
+        PostInfoBlockComponent
     ]
 
 })

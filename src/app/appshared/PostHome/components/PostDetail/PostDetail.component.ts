@@ -3,6 +3,7 @@
  */
 import{Component,OnInit,Input,ViewEncapsulation} from '@angular/core';
 import{Router, ActivatedRoute, Params, NavigationExtras}from '@angular/Router';
+import{PostItem}from '../../../../models/blog';
 
 @Component({
     selector:'post-postdetail',
@@ -10,9 +11,10 @@ import{Router, ActivatedRoute, Params, NavigationExtras}from '@angular/Router';
     
 })
 export class PostDetailComponent implements OnInit{  
-    @Input() UserName:string;
+    @Input() public model:PostItem;
+    postModel:PostItem;
     ngOnInit(){            
-         
+         this.postModel=this.model;
     }
 
 }

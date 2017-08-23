@@ -10,4 +10,5 @@ export * from './UserPostCategory';
 export * from './UserPostTags';
 export * from './UsuallyLinks';
 export * from './PostDetail';
+export * from './PostInfoBlock';
 

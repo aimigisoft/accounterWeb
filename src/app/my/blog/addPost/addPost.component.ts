@@ -117,6 +117,7 @@ export class AddBlogComponent implements OnInit, AfterViewInit, OnDestroy {
   btnSubmit() {
     console.log(this.form.value);
     this.form.value.content=this.editor.getContent();
+    
     this.blogService.save(this.form.value).subscribe(res => {
       if(res.msg=="0"){
         this.router.navigate(['/my/blog/admin']);

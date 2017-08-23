@@ -1,145 +1,15 @@
 
-<div class="post-detail">
+<div class="post-detail" *ngIf="model" >
     <div class="post-title">
-        你的知识需要管理PKM
+       {{model.title}}
     </div>
     <div class="post-body">
-        <div id="cnblogs_post_body"><a name="_labelTop"></a>
-            <div id="navCategory">
-                <p id="navCategory-title"><b>阅读目录</b></p>
-                <ul>
-                    <li><em>•</em><a href="#_label0">&nbsp; &nbsp; 个人知识管理</a></li>
-                    <li><em>•</em><a href="#_label1">&nbsp; &nbsp;&nbsp;“数据”、“信息”、“知识” 三者区分</a></li>
-                    <li class="active"><em>•</em><a href="#_label2">&nbsp; &nbsp;&nbsp;知识工作者面临知识管理五个阶段</a></li>
-                    <li><em>•</em><a href="#_label3">&nbsp; &nbsp; 知识分类 （显性知识、隐性知识）</a></li>
-                    <li><em>•</em><a href="#_label4">&nbsp; &nbsp;&nbsp;乔哈里视窗（Johari Window）</a></li>
-                </ul>
-            </div>
-            <p>有一段时间没有更新技术博客了~，大脑中总感觉有点东西要写，却不知道从哪里开始写~至少写点东西，也算是一个阶段的成长、反思~</p>
-            <p>学习（充电过程）、工作（知识变现过程）不是简单重复，永远都是最值得去反思、玩味的事儿~</p>
-            <p>对于处在信息爆炸时代的我们，对<span style="background-color: #ffff99;">“数据”、“信息”、“知识”</span>几个关键字的理解显得异常重要。而在程序开发面临最直接问题应该是
-                <span style="background-color: #ffff99;">"个人知识的管理"</span>
-            </p>
-            <div style="text-align: right"><a name="_label0"></a></div>
-            <h4 style="background-color: #ecf0f1; line-height: 45px;"><strong><span style="color: #ff6600;">&nbsp; &nbsp; 个人知识管理</span></strong></h4>
-            <p><strong>个人知识管理（Personal Knowledge Management）</strong>的概念一般指个人通过工具 建立知识体系并不断完善，进行知识的收集、消化吸收和创新的过程。</p>
-            <p>除非把一件事情放进构造好的<strong>模型</strong>里，否则很快就会忘记。详细的资料是靠表达它的简化方式保存在记忆里......获得的知识，如果没有完满的结构把他关联在一起，</p>
-            <p>那是一种多半会忘记的知识。一串不连贯的论据在记忆中仅有短促得可怜的寿命。————哈佛大学"认知研究中心"布鲁纳</p>
-            <div style="text-align: right"><a name="_label1"></a></div>
-            <h4 style="background-color: #ecf0f1; line-height: 45px;"><strong><span style="color: #ff6600;">&nbsp; &nbsp;&nbsp;“数据”、“信息”、“知识” 三者区分</span></strong></h4>
-            <p><span style="background-color: #ffff99;">“数据”&nbsp;是事实或观察的结果，是对客观事物的逻辑归纳，是用于表示客观事物的未经加工的的原始素材</span></p>
-            <p><span style="background-color: #ffff99;">“信息” 泛指人类社会传播的一切内容<a href="http://baike.baidu.com/item/%E5%86%85%E5%AE%B9" target="_blank"><span style="background-color: #ffff99;"><br></span></a>
-                </span>
-            </p>
-            <p><span style="background-color: #ffff99;">“知识” 就是人们在实践中获得的认识和经验</span></p>
-            <p><img src="http://images2015.cnblogs.com/blog/819169/201707/819169-20170710224805368-1437465235.jpg" alt=""></p>
-            <p>知识本身没有价值，知识只有在使用中才能体现其价值。</p>
-            <p>如果你有知识不能被利用，那么你只是一个移动的书橱而已，这样知识对个人成长和发展毫无益处。</p>
-            <div style="text-align: right"><a name="_label2"></a></div>
-            <h4 style="background-color: #ecf0f1; line-height: 45px;"><strong><span style="color: #ff6600;">&nbsp; &nbsp;&nbsp;知识工作者面临知识管理五个阶段</span></strong></h4>
-            <p><img src="http://images2015.cnblogs.com/blog/819169/201707/819169-20170710231225712-992093818.png" alt=""></p>
-            <div style="text-align: right"><a name="_label3"></a></div>
-            <h4 style="background-color: #ecf0f1; line-height: 45px;"><strong><span style="color: #ff6600;">&nbsp; &nbsp; 知识分类 （显性知识、隐性知识）</span></strong></h4>
-            <p><strong>显性知识&nbsp;指能够用语言、文字、肢体方式表达清楚的知识</strong></p>
-            <p><strong>隐性知识 虽人知道如何做，但却很难告诉别人或写明白说明白的知识</strong></p>
-            <p><strong><strong>从隐性知识到显性知识 </strong></strong>（如医生通过把脉就能知道病人是否得病）<strong><strong>&nbsp;</strong></strong>
-            </p>
-            <p><strong>从显性到隐性知识 &nbsp;当你阅读一本书时，其实是阅读笔者写出来的显性知识和信息。阅读完不同的章节，结合自己的成长、环境、目标产生自己的隐性知识。</strong></p>
-            <p><strong><strong>从显性到显性知识 当你阅读完一本书，<strong>结合自己的成长、环境、目标产生自己想法，并写出一篇读后感。就是从显性到显性知识的转化</strong></strong>
-                </strong>
-            </p>
-            <p><strong><strong><strong><strong>从<strong><strong><strong><strong>隐性</strong></strong>
-                </strong>
-                </strong>到隐性知识 &nbsp;<strong><strong><strong><strong>师父</strong></strong>
-                </strong>
-                </strong>带徒弟，<strong><strong><strong><strong>师父</strong></strong>
-                </strong>
-                </strong>的知识很难用语言和文字表达，徒弟只能通过师父的身教和自己的领悟来学习</strong>
-                </strong>
-                </strong>
-                </strong>
-            </p>
-            <p><strong>将隐性知识显性化才是你学知识的价值所在，</strong>用<strong>"乔哈里视窗（Johari Window）（乔哈里窗格）"理论</strong>能有一个很好的解释</p>
-            <div style="text-align: right"><a name="_label4"></a></div>
-            <h4 style="background-color: #ecf0f1; line-height: 45px;"><strong><span style="color: #ff6600;">&nbsp; &nbsp;&nbsp;乔哈里视窗（Johari Window）</span></strong></h4>
-            <p><img src="http://images2015.cnblogs.com/blog/819169/201707/819169-20170710225502493-1025057161.jpg" alt="">
-                <img
-                    src="http://images2015.cnblogs.com/blog/819169/201707/819169-20170710231514400-1597699769.jpg" alt=""></p>
-            <p>&nbsp; 1.公开区 自己知道而且别人也知道（如家喻户晓的故事）</p>
-            <p>&nbsp; 2.盲目区 自己不知道但别人知道的（交流的最好的效果是减少盲区）</p>
-            <p>&nbsp; 3.隐藏区 &nbsp;自己知道但别人不知道的知识 （如个人隐私、专业知识）体现出个人知识价值区域</p>
-            <p>&nbsp; 4.未知区 受限于每个人的局限，都有一些不知道的区域</p>
-            <div style="background-color: #f8f8ee; border: 1px dashed #CCCCCC; padding: 5px;">
-                <p>作者：Avenstar</p>
-                <p>出处：<span style="color: #000000;"><a style="text-decoration: none;" href="http://www.cnblogs.com/zjf-1992/p/7141788.html"><span style="color: #000000;">http://www.cnblogs.com/zjf-1992/p/7141788.html</span></a>
-                    </span>
-                </p>
-                <p>关于作者：专注于前端开发</p>
-                <p>本文版权归作者所有,转载请标明原文链接</p>
-
-
-            </div>
-            <div style="border-left: solid 4px #f57e42; padding: 10px; padding-left: 25px; background-color: whitesmoke; margin-top: 15px;">
-                <p style="margin: 0; padding: 0; font-size: 12px;">如果您觉得我的文章对您有用，请随意打赏。您的支持将鼓励我不断的迭代！</p>
-                <div style="display: inline-block; width: 150px; text-align: center; font-size: 12px; margin-top: 10px;"><img style="margin: 0; padding: 0; border: 1px solid #ccc; border-radius: 2px; vertical-align: top;" src="http://images2015.cnblogs.com/blog/819169/201612/819169-20161217234649308-691034621.png"
-                        alt="" width="150">
-                    <p style="margin: 0; padding: 0; font-size: 12px; line-height: 20px;">支付宝</p>
-
-
-                </div>
-                <div style="display: inline-block; width: 150px; text-align: center; font-size: 12px; margin-left: 15px; margin-top: 10px;"><img style="margin: 0; padding: 0; border: 1px solid #ccc; border-radius: 2px; vertical-align: top;" src="http://images2015.cnblogs.com/blog/819169/201612/819169-20161217234703339-605753393.png"
-                        alt="" width="150">
-                    <p style="margin: 0; padding: 0; font-size: 12px; line-height: 20px;">微信</p>
-
-
-                </div>
-
-
-            </div>
+        <div id="cnblogs_post_body"  [innerHTML]="model.content" >          
         </div>
     </div>
     <div class="clearfix"></div>
     <div class="post-info-block">
-        <div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/zjf-1992/category/908404.html" target="_blank">阅读/随笔/系列</a></div>
-        <div id="EntryTag"></div>
-        <div id="blog_post_info">
-            <div id="green_channel">
-                <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(7141788,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
-                <a id="green_channel_follow" onclick="follow('7ec51e23-b96c-e511-9fc1-ac853d9f53cc');" href="javascript:void(0);">关注我</a>
-                <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
-                <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="//common.cnblogs.com/images/icon_weibo_24.png" alt=""></a>
-                <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="//common.cnblogs.com/images/wechat.png" alt=""></a>
-            </div>
-            <div id="author_profile">
-                <div id="author_profile_info" class="author_profile_info">
-                    <a href="http://home.cnblogs.com/u/zjf-1992/" target="_blank"><img src="//pic.cnblogs.com/face/819169/20161225001236.png" class="author_avatar" alt=""></a>
-                    <div id="author_profile_detail" class="author_profile_info">
-                        <a href="http://home.cnblogs.com/u/zjf-1992/">Avenstar</a><br>
-                        <a href="http://home.cnblogs.com/u/zjf-1992/followees">关注 - 38</a><br>
-                        <a href="http://home.cnblogs.com/u/zjf-1992/followers">粉丝 - 19</a>
-                    </div>
-                </div>
-                <div class="clear"></div>
-                <div id="author_profile_honor"></div>
-                <div id="author_profile_follow">
-                    <a href="javascript:void(0);" onclick="follow('7ec51e23-b96c-e511-9fc1-ac853d9f53cc');return false;">+加关注</a>
-                </div>
-            </div>
-            <div id="div_digg">
-                <div class="diggit" onclick="votePost(7141788,'Digg')">
-                    <span class="diggnum" id="digg_count">0</span>
-                </div>
-                <div class="buryit" onclick="votePost(7141788,'Bury')">
-                    <span class="burynum" id="bury_count">0</span>
-                </div>
-                <div class="clear"></div>
-                <div class="diggword" id="digg_tips">
-                </div>
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div id="post_next_prev"><a href="http://www.cnblogs.com/zjf-1992/p/5898779.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/zjf-1992/p/5898779.html"
-                title="发布于2017-06-16 08:24">清除float浮动造成影响的几种解决方案</a><br></div>
+        <post-postinfoblock></post-postinfoblock>
     </div>
     <div class="post-desc">
         posted @ <span id="post-date">2017-07-11 08:08</span> <a href="http://www.cnblogs.com/zjf-1992/">Avenstar</a> 阅读(

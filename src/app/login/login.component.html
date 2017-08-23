@@ -1,13 +1,20 @@
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">用户名</label>
-    <input type="text" class="form-control"  placeholder="用户登录名">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" placeholder="Password">
-  </div>
-  
-  <button type="submit" class="btn btn-default">登录</button>
-  <button type="button" class="btn btn-default">注册</button>
-</form>
+<div class="user-register-container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">用户注册</h3>
+    </div>
+    <div class="panel-body">
+      <form  (ngSubmit)="login()" #loginForm="ngForm">
+        <div class="form-group">
+          <label for="exampleInputEmail1">用户名</label>
+          <input type="text" class="form-control" name="account" [(ngModel)]="account" placeholder="用户登录名">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Password">
+        </div>
+
+        <button type="submit" class="btn btn-default" >登录</button>
+        <button type="button" class="btn btn-default" (click)="register($event)">注册</button>
+      </form>
+    </div>

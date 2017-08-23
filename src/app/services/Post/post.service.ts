@@ -5,7 +5,9 @@ import { Observable } from 'rxjs/rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { ResultModel } from '../../models/base.model';
-import { PostItem, PostsResult, PostItemResult } from '../../models/blog';
+import { PostItem, PostsResult, PostItemResult,
+    PostSummayListResult
+} from '../../models/blog';
 import { APPCONFIG } from '../../models/config';
 
 
@@ -18,11 +20,11 @@ export class PostService {
     constructor(private http: Http) {
         this.headers = new Headers({
             'Content-Type': 'application/json',
-            'sessionToken': sessionStorage.getItem('sessionToken')
+            'Authorization': "Bearer "+sessionStorage.getItem('token')
         });
 
         this.requestHeader = new Headers({
-            'sessionToken': sessionStorage.getItem('sessionToken')
+            'Authorization': "Bearer "+sessionStorage.getItem('token')
         });
 
     }
@@ -115,11 +117,25 @@ export class PostService {
         param.set("pageSize", pageSize.toString());
         return this.http.get(url, { search: param, headers: this.requestHeader })
             .map((res: Response) => {
-                let result = res.json() as PostsResult;
-                console.log(result);
+                let result = res.json() as PostsResult;              
                 return result;
             });
     }
+
+    getSummaryPageList(type:string,pageNo:number,pageSize:number): Observable<PostSummayListResult> {
+        let url = this.appConfig.Post.getSummaryListUrl;
+        let param = new URLSearchParams();
+        param.set("type",type);
+        param.set("pageIndex", pageNo.toString());
+        param.set("pageSize", pageSize.toString());
+        return this.http.get(url, { search: param, headers: this.requestHeader })
+            .map((res: Response) => {
+                let result = res.json() as PostSummayListResult;               
+                return result;
+            });
+    }
+
+    
 
 
 }

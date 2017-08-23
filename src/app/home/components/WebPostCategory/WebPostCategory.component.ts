@@ -5,8 +5,7 @@ import{PostItem} from '../../../models/blog';
 
 @Component({   
     selector:'home-postcategory',
-    templateUrl:'./WebPostCategory.component.html',
-    styleUrls:['./WebPostCategory.component.css']
+    templateUrl:'./WebPostCategory.component.html'
 })
 export class WebPostCategoryComponent implements OnInit{
 

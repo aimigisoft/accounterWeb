@@ -9,8 +9,8 @@
             </div>
             <div class="pull-right login-wrap  banner-action">
                 <ul class="">
-                    <li><a href="/login">登录</a>&nbsp;|&nbsp;<a href="/register">注册</a></li>
-
+                    <li *ngIf="!CurrentUser"><a href="/login">登录</a>&nbsp;|&nbsp;<a href="/register">注册</a></li>
+                    <li *ngIf="CurrentUser">欢迎您！<a href="/u">{{CurrentUser.name}}</a>&nbsp;|&nbsp;<a href="/register">退出</a></li>
                 </ul>
             </div>
         </div>
@@ -38,71 +38,35 @@
                         </ul>
                     </div>
                 </div>
-                <dl class="blog_list clearfix">
-                    <dt><a href="http://blog.csdn.net/qq_39558035"><img src="http://avatar.csdn.net/F/2/5/3_qq_39558035.jpg" class="head"></a>
-                        <a href="http://blog.csdn.net/qq_39558035" class="nickname">qq_39558035</a>
-                    </dt>
-                    <dd>
-                        <h3 class="tracking-ad" data-mod="popu_254"><a href="http://blog.csdn.net/qq_39558035/article/details/75372796" target="_blank">二甲基四苯基二硅氧烷 IOTA 259</a></h3>
-                        <div class="blog_list_c">二甲基四苯基二硅氧烷 IOTA 259 : 1,3-二甲基-1,1,3,3-四苯基二硅氧烷 中文同义词: 1,1,3,3-TETRAPHENYL-1,3-DIMETHY...</div>
-                        <div class="blog_list_b clearfix">
-                            <div class="blog_list_b_l fl">
-                                <span><i class="fa fa-list-ul"></i><a href="/www/newarticle.html" target="_blank">互联网</a></span>
-                            </div>
-                            <div class="blog_list_b_r fr">
-                                <label>1小时前</label><span><i class="fa fa-eye"></i><em>0</em></span>
-                            </div>
-                        </div>
-
-                    </dd>
-                </dl>
-                <dl class="blog_list clearfix">
-                    <dt><a href="http://blog.csdn.net/qq_39558035"><img src="http://avatar.csdn.net/F/2/5/3_qq_39558035.jpg" class="head"></a>
-                        <a href="http://blog.csdn.net/qq_39558035" class="nickname">qq_39558035</a>
-                    </dt>
-                    <dd>
-                        <h3 class="tracking-ad" data-mod="popu_254"><a href="http://blog.csdn.net/qq_39558035/article/details/75372796" target="_blank">二甲基四苯基二硅氧烷 IOTA 259</a></h3>
-                        <div class="blog_list_c">二甲基四苯基二硅氧烷 IOTA 259 : 1,3-二甲基-1,1,3,3-四苯基二硅氧烷 中文同义词: 1,1,3,3-TETRAPHENYL-1,3-DIMETHY...</div>
-                        <div class="blog_list_b clearfix">
-                            <div class="blog_list_b_l fl">
-
-                                <span><i class="fa fa-list-ul"></i><a href="/www/newarticle.html" target="_blank">互联网</a></span>
-                            </div>
-                            <div class="blog_list_b_r fr">
-                                <label>1小时前</label><span><i class="fa fa-eye"></i><em>0</em></span>
-                            </div>
-                        </div>
-
-                    </dd>
-                </dl>
-                <dl class="blog_list clearfix">
-                    <dt><a href="http://blog.csdn.net/qq_39558035"><img src="http://avatar.csdn.net/F/2/5/3_qq_39558035.jpg" class="head"></a>
-                        <a href="http://blog.csdn.net/qq_39558035" class="nickname">qq_39558035</a>
-                    </dt>
-                    <dd>
-                        <h3 class="tracking-ad" data-mod="popu_254"><a href="http://blog.csdn.net/qq_39558035/article/details/75372796" target="_blank">二甲基四苯基二硅氧烷 IOTA 259</a></h3>
-                        <div class="blog_list_c">二甲基四苯基二硅氧烷 IOTA 259 : 1,3-二甲基-1,1,3,3-四苯基二硅氧烷 中文同义词: 1,1,3,3-TETRAPHENYL-1,3-DIMETHY...</div>
-                        <div class="blog_list_b clearfix">
-                            <div class="blog_list_b_l fl">
-
-                                <span><i class="fa fa-list-ul"></i><a href="/www/newarticle.html" target="_blank">互联网</a></span>
-                            </div>
-                            <div class="blog_list_b_r fr">
-                                <label>1小时前</label><span><i class="fa fa-eye"></i><em>0</em></span>
-                            </div>
-                        </div>
-
-                    </dd>
-                </dl>
+                <home-blogsummaylist [type]="'newest'" [items]="blogsummarylist"></home-blogsummaylist>
+                <div class="blog-pagination">
+                    <pagination [boundaryLinks]="true" [totalItems]="totalItems" (pageChanged)="pageChanged($event)" [rotate]="false" [maxSize]="maxSize"
+                        [(ngModel)]="currentPage" class="pagination-sm" previousText="上页" nextText="下页" firstText="首页"
+                        lastText="尾页"></pagination>
+                </div>
             </div>
         </div>
         <div class="cont-right">
-           <home-postcategory></home-postcategory>
+            <home-postcategory></home-postcategory>
             <home-toppost></home-toppost>
-            
+            <home-expertrank></home-expertrank>
+            <home-knowledgebaserank></home-knowledgebaserank>
+            <home-contactus></home-contactus>
         </div>
     </div>
-    <footer class="home-footer">
-        <div class=""></div>
+    <footer >
+        <div class="home-footer">
+            <dl>
+                <dd class="foot_sub_menu">
+                    友情链接：<a href="#">github.com</a> |<a href="#">github.com</a>
+                </dd>
+                <dd class="foot_sub_menu">
+                    我可以卑微如尘土，不可扭曲如蛆虫————季业
+                </dd>
+                <dd class="foot_sub_menu">
+                    作者：aimigi
+                </dd>
+            </dl>
+        </div>
     </footer>
 </div>

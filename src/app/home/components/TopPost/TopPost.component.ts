@@ -5,8 +5,7 @@ import{PostItem} from '../../../models/blog';
 
 @Component({   
     selector:'home-toppost',
-    templateUrl:'./TopPost.component.html',
-    styleUrls:['./TopPost.component.css']
+    templateUrl:'./TopPost.component.html'
 })
 export class HomeTopPostComponent implements OnInit{
 

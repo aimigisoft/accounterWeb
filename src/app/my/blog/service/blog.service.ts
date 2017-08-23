@@ -29,6 +29,7 @@ export class BlogService {
 
     save(post: PostItem): Observable<ResultModel> {
         let url = this.appConfig.Post.addUrl;
+        post.author='admin';
         return this.http.post(url, post, { headers: this.headers })
             .map((res: Response) => {
                 let result = res.json() as ResultModel;

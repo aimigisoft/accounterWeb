@@ -13,6 +13,8 @@ import {
 
 import {PostHomeSharedModule} from '../appshared/PostHome/PostHomeShared.module';
 
+import{PostService} from '../services/post';
+
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import {PostHomeSharedModule} from '../appshared/PostHome/PostHomeShared.module'
   declarations: [
     PostHomePageComponent,
     PostInfoPageComponent
-  ]
+  ],
+  providers:[PostService]
 })
 export class UserPostModule {
 }
