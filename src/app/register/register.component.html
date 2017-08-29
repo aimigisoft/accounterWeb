@@ -1,0 +1,73 @@
+<div class="container-fluid bg">
+
+    <header class="top-banner">
+        <div class="banner-container row center-block">
+            <div class="col-md-3 pull-left logo clearfix">
+                <a href="/" title="首页" target="_blank" class="icon">
+                             accounter.cn
+                          </a>
+            </div>
+
+        </div>
+
+    </header>
+    <div class=" home-cont clearfix">
+
+        <div class="user-register-container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">用户注册</h3>
+                </div>
+                <div class="panel-body">
+                    <form [formGroup]="userForm" (ngSubmit)="doRegister()" class="form-horizontal" role="form" novalidate>
+                        <div class="form-group" [ngClass]="{'has-error': formErrors.account }">
+                            <label class="col-sm-3 control-label">用户账号</label>
+                            <div class="col-sm-8">
+                                <input formControlName="account" type="text" class="form-control" placeholder="请输入账号">
+                                <div *ngIf="formErrors.account" class="text-danger">
+                                    {{ formErrors.account }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" [ngClass]="{'has-error': formErrors.nickname }">
+                            <label class="col-sm-3 control-label">昵称</label>
+                            <div class="col-sm-8">
+                                <input formControlName="nickname" type="text" class="form-control" placeholder="请输入昵称">
+                                <div *ngIf="formErrors.nickname" class="text-danger">
+                                    {{ formErrors.nickname }}
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" [ngClass]="{'has-error': formErrors.password }">
+                            <label class="col-sm-3 control-label">密码</label>
+                            <div class="col-sm-8">
+                                <input formControlName="password" validateEqual="confirmPassword" reverse=true type="password" class="form-control" placeholder="请输入最少8位数密码">
+                                <div *ngIf="formErrors.password" class="text-danger">
+                                    {{ formErrors.password }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" [ngClass]="{'has-error': formErrors.confirmpassword }">
+                            <label class="col-sm-3 control-label">重复密码</label>
+                            <div class="col-sm-8">
+                                <input formControlName="confirmpassword" validateEqual="password" type="password" class="form-control" placeholder="请重复输入密码">
+                                <div *ngIf="formErrors.confirmpassword" class="text-danger">
+                                    {{ formErrors.confirmpassword }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="formErrors.formError" class="col-sm-offset-3 col-sm-8 alert alert-danger">{{ formErrors.formError }}</div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-8">
+                                <button [disabled]="userForm.invalid" type="submit" class="btn btn-success">注册</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

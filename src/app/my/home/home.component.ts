@@ -1,10 +1,10 @@
 import{Component} from '@angular/core';
 
 @Component({
-    selector:'u-home',
+    selector:'my-home',
     templateUrl:'./home.component.html'
 
 })
-export class UserCenterHomeComponent{
+export class MyHomeComponent{
 
 }

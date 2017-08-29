@@ -10,7 +10,7 @@
             <div class="pull-right login-wrap  banner-action">
                 <ul class="">
                     <li *ngIf="!CurrentUser"><a href="/login">登录</a>&nbsp;|&nbsp;<a href="/register">注册</a></li>
-                    <li *ngIf="CurrentUser">欢迎您！<a href="/u">{{CurrentUser.name}}</a>&nbsp;|&nbsp;<a href="/register">退出</a></li>
+                    <li *ngIf="CurrentUser">欢迎您！<a href="/my/blog/admin">{{CurrentUser.name}}</a>&nbsp;|&nbsp;<a href="/register">退出</a></li>
                 </ul>
             </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="cont-left">
             <div class="list-wrap">
                 <div class="category_sec clearfix">
-                    <div class="category_sec_l "><em><i class="fa fa-internet-explorer"></i>互联网</em></div>
+                    <div class="category_sec_l "><em><i class="fa fa-users" aria-hidden="true"></i>会计人生</em></div>
                     <div class="category_sec_r">
                         <ul class="cate_list">
                             <li class="cate_cur"><a href="/www/newarticle.html">最新</a></li>
@@ -64,7 +64,7 @@
                     我可以卑微如尘土，不可扭曲如蛆虫————季业
                 </dd>
                 <dd class="foot_sub_menu">
-                    作者：aimigi
+                    网站作者：aimigi
                 </dd>
             </dl>
         </div>

@@ -1,0 +1,20 @@
+<dl class="blog_list clearfix" *ngFor=" let item of items">
+    <dt><a href="http://blog.csdn.net/qq_39558035"><img src="/assets/imgs/photo.png" class="head"></a>
+        <a href="http://blog.csdn.net/qq_39558035" class="nickname">{{item.user.nickname}}</a>
+    </dt>
+    <dd>
+        <h3 class="tracking-ad" data-mod="popu_254"><a href="u/{{item.id}}" target="_blank">{{item.title}}</a></h3>
+        <div class="blog_list_c">{{item.summary}}</div>
+        <div class="blog_list_b clearfix">
+            <div class="blog_list_b_l fl">
+                <span><i class="fa fa-list-ul"></i><a href="/www/newarticle.html" target="_blank">{{item.webCategoryName}}</a></span>
+            </div>
+            <div class="blog_list_b_r fr">
+                <label>{{item.pubDate}}</label>
+                <span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>{{item.like}}</em></span>
+                <span><i class="fa fa-eye"></i><em>{{item.reads}}</em></span>
+            </div>
+        </div>
+
+    </dd>
+</dl>

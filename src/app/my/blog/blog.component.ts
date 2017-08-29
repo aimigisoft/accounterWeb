@@ -5,6 +5,6 @@ import{Component} from '@angular/core';
     templateUrl:'./blog.component.html'
 
 })
-export class BlogHomeComponent{
+export class MyBlogComponent{
 
 }

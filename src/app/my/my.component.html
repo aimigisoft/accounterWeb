@@ -1,0 +1,44 @@
+<div class="container-fluid bg">
+        
+            <header class="top-banner">
+                <div class="banner-container row center-block">
+                    <div class="col-md-3 pull-left logo clearfix">
+                        <a href="#" title="首页" target="_blank" class="icon">
+                           我的会计园
+                        </a>
+                    </div>
+                    <div class="pull-right login-wrap  banner-action">
+                        <ul class="">                            
+                            <li >欢迎您！<a href="/my/blog/admin">xxxx</a>&nbsp;|&nbsp;<a href="/register">退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <div class="banner-container navbar-collapse">
+                            <ul class="navbar-nav">
+                                    <li routerLinkActive="active"><a routerLink="/my/home"  >首页</a></li>
+                                    <li routerLinkActive="active"><a routerLink="/my/center">个人中心</a></li>
+                                    <li routerLinkActive="active"><a routerLink="/my/blog">文章管理</a></li>
+                                </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="home-cont clearfix">
+                <router-outlet></router-outlet>
+            </div>
+            <footer >
+                <div class="home-footer">
+                    <dl>
+                        <dd class="foot_sub_menu">
+                            友情链接：<a href="#">github.com</a> |<a href="#">github.com</a>
+                        </dd>
+                        <dd class="foot_sub_menu">
+                            我可以卑微如尘土，不可扭曲如蛆虫————季业
+                        </dd>
+                        <dd class="foot_sub_menu">
+                            网站作者：aimigi
+                        </dd>
+                    </dl>
+                </div>
+            </footer>
+        </div>

@@ -1,7 +1,7 @@
 import{Component,OnInit,ViewEncapsulation} from '@angular/core';
-import{Router, ActivatedRoute, Params, NavigationExtras}from '@angular/router';
-import {PostService} from '../../../services/Post';
-import{PostItem} from '../../../models/blog';
+
+
+import{PostItem} from '../../../../models/blog';
 
 @Component({   
     selector:'home-postcategory',
@@ -11,7 +11,7 @@ export class WebPostCategoryComponent implements OnInit{
 
     items:PostItem[];
     
-    constructor(private route:Router,private router:ActivatedRoute){}
+    constructor(){}
     ngOnInit(){      
       
          //this.username=this.router.snapshot.params["user"];

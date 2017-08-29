@@ -1,0 +1,27 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>NO</th>
+            <th>标题</th>
+            <th>发布状态</th>
+            <th>日期</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of posts;let i = index;">
+            <th scope="row">{{pageSize * (currentPageNo - 1) + i + 1}}</th>
+            <td>{{item.title}}</td>
+            <td>{{item.publishStatus}}</td>
+            <td>{{item.createDate}}</td>
+            <td> <a title="编辑"  (click)="btnClick('edit',item.id)" class="btn btn-xs btn-info add2"><i class="icon-edit bigger-120"></i></a>
+                <a title="删除"   (click)="btnClick('delete',item.id)" class="btn btn-xs btn-grey"><i class="icon-trash bigger-120"></i></a></td>
+        </tr>
+
+    </tbody>
+</table>
+<div class="blog-pagination clearfix">
+    <pagination [boundaryLinks]="true" [totalItems]="totalItems" (pageChanged)="pageChanged($event)" [rotate]="false" [maxSize]="maxSize"
+        [(ngModel)]="currentPage" class="pagination-sm" previousText="上页" nextText="下页" firstText="首页" lastText="尾页"></pagination>
+
+</div>

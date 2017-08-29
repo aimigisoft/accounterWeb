@@ -1,0 +1,46 @@
+<div class="persional_property">
+    <div class="person_info_con" (mouseenter)="onHoverItem($event)" (mouseleave)="onLeaveItem($event)">
+        <i class="fa fa-pencil-square-o fa-lg person-info-edit" *ngIf="showInfoEdit" (click)="editPersonInfo()"></i><a name="M_base"></a>
+        <dl class="person-photo" (mouseenter)="onHoverImg($event)" (mouseleave)="onLeaveImg($event)">
+            <dt><a href="javascript:;"><img src="assets/imgs/photo.png" class="header">
+                <span class="edit_person_pic" (click)="editPersonPhoto()"></span></a>
+            </dt>
+            <dd class="focus_num"><b><a href="/my/follow" target="_blank">0</a></b>关注</dd>
+            <dd class="fans_num"><b><a href="/my/fans" target="_blank">0</a></b>粉丝</dd>
+        </dl>
+        <dl class="person-info">
+            <dt class="person-nick-name">
+                <span>aimigi</span> </dt>
+            <dd class="person-detail">软件外包<span>|</span>高级开发<span>|</span>张三<span>|</span>中国<span>|</span>男<span>|</span>1985-11-4</dd>
+            <dd class="person-sign">我可以卑微如尘土，不可扭曲如蛆虫</dd>
+        </dl>
+    </div>
+</div>
+<div class="cont-left">
+    <div class="list-wrap">
+        <div class="person_detail_tab">
+            <tabset>
+                <tab heading="我的博客">
+                    <div class="border clearfix">
+                        <span class="fl">
+                         <a href="javascript:;;"  routerLink="/my/blog" class="btn btn-warning"><i class="icon-plus"></i>文章管理</a>
+                        </span>
+                    </div>
+                </tab>
+                <tab heading="我的资料">
+                    eeee
+                </tab>
+                <tab heading="我的动态">
+                    cccc
+                </tab>
+                <tab heading="我的相册">
+                    rrrr
+                </tab>
+            </tabset>
+
+        </div>
+    </div>
+</div>
+<div class="cont-right">
+    <home-contactus></home-contactus>
+</div>

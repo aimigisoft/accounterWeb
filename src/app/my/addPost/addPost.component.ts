@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import {Router} from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { BlogService } from '../service';
+import { PostService } from '../../services/Post';
 
 @Component({
   selector: 'my-blog-add',
@@ -11,7 +11,7 @@ import { BlogService } from '../service';
 export class AddBlogComponent implements OnInit, AfterViewInit, OnDestroy {
   form: FormGroup;
   private editor;
-  constructor(private blogService: BlogService,private router: Router) { }
+  constructor(private blogService: PostService,private router: Router) { }
 
   ngOnInit() {
     this.buildForm();

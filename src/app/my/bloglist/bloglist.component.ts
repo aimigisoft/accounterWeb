@@ -1,15 +1,15 @@
 import{Component,OnInit,Input} from '@angular/core';
-import{PostItem} from '../../../models/blog/';
-import {BlogService} from '../service';
+import{PostItem} from '../../models/blog/';
+import {PostService} from '../../services/Post';
 
 @Component({
-    selector:'my-admin-bloglist',
+    selector:'my-bloglist',
     templateUrl:'./bloglist.component.html'
 
 })
 export class BlogListComponent implements OnInit{
     posts:PostItem[]
-    constructor(private blogService:BlogService){}
+    constructor(private blogService:PostService){}
 
     @Input() pageSize: number = 10;
     @Input() totalItems: number = 0;

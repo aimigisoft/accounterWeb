@@ -6,15 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { PaginationModule } from 'ng2-bootstrap';
 
+import{PostHomeSharedModule} from  '../appshared/PostHome/PostHomeShared.module'
+
 import { routing } from './home.routing';
 import { 
   HomePageComponent,
   HomeTopPostComponent,
-  WebPostCategoryComponent,
-  BlogSummaryListComponent,
-  ContactUsComponent,
-  ExpertRankComponent,
-  KnowledgeBaseRankComponent
+  
    } from './components';
 
 //import {PostHomeSharedModule} from '../appshared/PostHome/PostHomeShared.module';
@@ -28,6 +26,7 @@ import{UserService} from '../services/User';
   imports: [
     CommonModule,    
     FormsModule,
+    PostHomeSharedModule,
     PaginationModule.forRoot(),
     routing
 
@@ -35,11 +34,7 @@ import{UserService} from '../services/User';
   declarations: [
     HomePageComponent,
     HomeTopPostComponent,
-    WebPostCategoryComponent,
-    BlogSummaryListComponent ,
-    ContactUsComponent,
-    ExpertRankComponent,
-    KnowledgeBaseRankComponent
+   
   ],
   providers:[
     PostService,

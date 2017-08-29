@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"> <title>HTML5 Template Element Demo</title></head>
+<body>
+<h4>HTML5 Template Element Demo</h4>
+<!-- Template Container -->
+<div class="tpl-container"></div>
+<!-- Template -->
+<template id="tpl">
+    <span>I am span in template</span>
+</template>
+<!-- Script -->
+<script type="text/javascript">
+    (function renderTpl() {
+        if ('content' in document.createElement('template')) {
+            var tpl = document.querySelector('#tpl');
+            var tplContainer = document.querySelector('.tpl-container');
+            var tplNode = document.importNode(tpl.content, true);
+            tplContainer.appendChild(tplNode); 
+        } else {
+            throw  new Error("Current browser doesn't support template element");
+        }
+    })();
+</script>
+</body>
+</html>
