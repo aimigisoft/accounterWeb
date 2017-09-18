@@ -21,7 +21,7 @@ export * from './KnowledgeBaseRank';
 
 //common component
 export * from './tabs';
-
+export * from './NavMenu';
 
 export * from './RouterNav';
 

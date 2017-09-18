@@ -1,24 +1,24 @@
-<template #tp1>
-    <span> 我是模板内容H5！！！</span>
-</template>
-
-<div class="admin-top">
-    <div class="top-logo">
-        <span>accounter.cn</span>
-    </div>
-    <div class="collapse-menu"></div>
-    <div calss="top-user"></div>
+<admin-header></admin-header>
+<div class="app-body">
+  <admin-sidebar></admin-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    <!-- Breadcrumb -->
+    <ol class="breadcrumb">
+      <admin-breadcrumb></admin-breadcrumb>
+      <!-- Breadcrumb Menu-->
+      <li class="breadcrumb-menu d-md-down-none">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <a class="btn" href="#"><i class="icon-speech"></i></a>
+          <a class="btn" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;首页</a>
+          <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+        </div>
+      </li>
+    </ol>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div><!-- /.conainer-fluid -->
+  </main>
+  <admin-aside></admin-aside>
 </div>
-<div class="aside">
-    <ul>
-        <li>管理中心</li>
-        <li>博客管理</li>
-        <li>用户管理</li>
-        <li>权限管理</li>
-        <li>系统设置</li>
-    </ul>
-</div>
-<div class="admin-content">
-    内容区域
-</div>
-<footer>底部</footer>
+<admin-footer></admin-footer>

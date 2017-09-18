@@ -20,9 +20,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "../node_modules/_font-awesome@4.7.0@font-awesome/css/font-awesome.min.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css"        
+        "scss/main.scss"              
       ],
       "scripts": [
         "../node_modules/tinymce/tinymce.js",      
@@ -58,7 +56,7 @@
         "../node_modules/tinymce/plugins/textcolor/plugin.js",
         "../node_modules/tinymce/plugins/colorpicker/plugin.js",
         "../node_modules/tinymce/plugins/textpattern/plugin.js",
-        "../node_modules/tinymce/plugins/imagetools/plugin.js"
+        "../node_modules/tinymce/plugins/imagetools/plugin.js"       
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -89,7 +87,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

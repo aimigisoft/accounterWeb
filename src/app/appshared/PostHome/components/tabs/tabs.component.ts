@@ -4,7 +4,7 @@ import { TabDirective } from './tab.directive';
 import {TabsetConfig} from './tab.config';
 
 @Component({
-  selector: 'tabset',
+  selector: 'mytabset',
   template: `
     <ul [ngClass]="classMap" (click)="$event.preventDefault()">
         <li *ngFor="let tabz of tabs" [ngClass]="[ tabz.customClass || '']" (click)="tabz.active = true"

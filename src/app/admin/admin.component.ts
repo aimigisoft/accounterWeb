@@ -1,17 +1,18 @@
-import{Component,TemplateRef,ViewChild,AfterViewInit,ViewContainerRef} from '@angular/core';
-
+import{Component,TemplateRef,ViewChild,AfterViewInit,OnInit,ViewEncapsulation} from '@angular/core';
+import {NavItem} from   '../models/NavItem';
+import{ADMIN_MENU} from './admin-nav';
 @Component({
     selector:'admin',
-    templateUrl:'./admin.component.html',
-    styleUrls:['./admin.component.css']
-
+    templateUrl:'./admin.component.html'
 })
 export class AdminComponent {
-    @ViewChild('tp1') tplRef:TemplateRef<any>;
-    //这是一个视图容器，可以添加一个或者多个视图
-    @ViewChild('tp1', { read: ViewContainerRef }) tplVcRef: ViewContainerRef;
+    // @ViewChild('tp1') tplRef:TemplateRef<any>;
+    // //这是一个视图容器，可以添加一个或者多个视图
+    // @ViewChild('tp1', { read: ViewContainerRef }) tplVcRef: ViewContainerRef;
 
-    ngAfterViewInit(){
+    menus:NavItem[];
+
+    //ngAfterViewInit(){
         // // 页面中的<!--template bindings={}-->元素
         // let commentElement = this.tpl.elementRef.nativeElement;
         // // 创建内嵌视图
@@ -21,8 +22,12 @@ export class AdminComponent {
         //     commentElement.parentNode
         //       .insertBefore(node, commentElement.nextSibling);
         // });
-        console.dir(this.tplVcRef);
-        this.tplVcRef.createEmbeddedView(this.tplRef);
+        // console.dir(this.tplVcRef);
+        // this.tplVcRef.createEmbeddedView(this.tplRef);
+    //}
+
+    ngOnInit(){
+        this.menus=ADMIN_MENU;
     }
 }
 

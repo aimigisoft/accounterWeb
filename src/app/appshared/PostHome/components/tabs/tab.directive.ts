@@ -2,7 +2,7 @@ import {
     Directive, EventEmitter, HostBinding, Input, Output, TemplateRef, OnInit, OnDestroy, ElementRef, Renderer } from '@angular/core';
   import { TabsetComponent } from './tabs.component';
   
-  @Directive({selector: 'tab, [tab]'})
+  @Directive({selector: 'mytab, [mytab]'})
   export class TabDirective implements OnInit, OnDestroy {
     /** tab header text */
     @Input() public heading: string;

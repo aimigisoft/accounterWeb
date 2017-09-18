@@ -1,4 +1,5 @@
 export const APPCONFIG = {
+    UploadUrl:'http://localhost:9090/api/File/Uploads',
     Post: {
         addUrl: 'http://localhost:9090/api/Post/add',
         updateUrl: 'http://localhost:9090/api/Post/update',

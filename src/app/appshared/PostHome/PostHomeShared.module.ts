@@ -24,7 +24,9 @@ import {
     KnowledgeBaseRankComponent,
     TabDirective,
     TabsetComponent,
-    RouterNavComponent
+    RouterNavComponent,
+    NavMenuComponent,
+    NavMenuItemComponent
 
 } from './components';
 
@@ -32,7 +34,9 @@ import {
 
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        RouterModule
+
     ],
     declarations: [
         CommentRankComponent,
@@ -55,7 +59,9 @@ import {
         KnowledgeBaseRankComponent,
         TabDirective,
         TabsetComponent,
-        RouterNavComponent
+        RouterNavComponent,
+        NavMenuComponent,
+        NavMenuItemComponent
     
     ],
     exports: [
@@ -79,7 +85,9 @@ import {
         KnowledgeBaseRankComponent,
         TabsetComponent,
         TabDirective,
-        RouterNavComponent
+        RouterNavComponent,
+        NavMenuComponent,
+        NavMenuItemComponent
     ]
 
 })

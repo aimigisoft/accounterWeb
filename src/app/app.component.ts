@@ -5,8 +5,7 @@ import { Observable } from 'rxjs/rx';
 
 @Component({
   selector: 'app',
-  template: `
-  
+  template: `  
   <router-outlet></router-outlet>`,
   styleUrls: ['./app.component.css'],
   encapsulation:ViewEncapsulation.None,
